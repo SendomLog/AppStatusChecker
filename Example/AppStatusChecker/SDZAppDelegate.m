@@ -8,11 +8,22 @@
 
 #import "SDZAppDelegate.h"
 
+#import <SDZAppStatusCheckTool.h>
+
 @implementation SDZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [SDZAppStatusCheckTool checkWithType:SDZAppOnlineStatusCheckToolTypeOnline para:@{@"ID": @"6446027093"} completionHandler:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
+            if (!error && data[@"resultCount"]) {
+                bool online = [data[@"resultCount"] boolValue];
+                if (online) {
+                    NSLog(@"在线");
+                }else {
+                    NSLog(@"下线");
+                }
+            }
+    }];
     return YES;
 }
 

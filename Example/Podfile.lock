@@ -1,0 +1,16 @@
+PODS:
+  - AppStatusChecker (0.1.0)
+
+DEPENDENCIES:
+  - AppStatusChecker (from `../`)
+
+EXTERNAL SOURCES:
+  AppStatusChecker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AppStatusChecker: 7dd950dfa3a5e3e24025c8133ffb0cfe5c3c3914
+
+PODFILE CHECKSUM: 003afd1fdafd293ecdbe2dc6cb8085918cfe81e7
+
+COCOAPODS: 1.11.3
